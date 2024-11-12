@@ -4,65 +4,54 @@ import java.util.Random;
 
 public class Arreglo {
 
+  
 
- 
+  private Random aleatorio = new Random();
 
-    public int buscarMayor(int [] arregloNuevo){
+  public int buscarMayor(int[] arregloNuevo) {
+    int mayor = arregloNuevo[0];
 
-       int mayor = arregloNuevo[0];
+    for (int i = 1; i < arregloNuevo.length; i++) {
 
-      for(int i = 1; i < arregloNuevo.length; i ++){
-        
-        
-        if(arregloNuevo[i] > mayor){
+      if (arregloNuevo[i] > mayor) {
 
-            mayor = arregloNuevo[i];
-        }
+        mayor = arregloNuevo[i];
       }
-        
-      return mayor; 
-      
-       }
+    }
 
+    return mayor;
 
+  }
 
-      public int buscarMenor( int [] arregloNuevo){
+  public int buscarMenor(int[] arregloNuevo) {
 
-      int menor = arregloNuevo[0];
+    int menor = arregloNuevo[0];
 
-        for(int i = 1; i < arregloNuevo.length; i ++){
+    for (int i = 1; i < arregloNuevo.length; i++) {
 
-            if(arregloNuevo[i] < menor){
+      if (arregloNuevo[i] < menor) {
 
-                menor  = arregloNuevo[i];
-            }
-          }
-          return menor;
-
+        menor = arregloNuevo[i];
       }
-      
-      // Creo un objeto de la clase random
+    }
+    return menor;
 
-      Random aleatorio = new Random();
-      
+  }
 
-      public int [] obtenerNumerosRandom( int valor){
+  
 
-        int[] arrAleatorio = new int[valor];
+  public int[] obtenerNumerosRandom(int valor) {
 
-        for (int i = 0; i <= valor; i ++){
+    int[] arrAleatorio = new int[valor];
 
-            arrAleatorio[i] = aleatorio.nextInt();
+    for (int i = 0; i <= valor; i++) {
 
-        }
+      arrAleatorio[i] = aleatorio.nextInt();
 
-        return arrAleatorio; 
+    }
 
-      }
-    
-      }
+    return arrAleatorio;
 
+  }
 
-
-
-
+}
